@@ -2,37 +2,22 @@
 
 import Link from 'next/link'
 
-const navLinks = [
-  { href: '/', label: 'About' },
-  { href: '/contact', label: 'Contact' },
-]
-
 export function Header() {
   return (
-    <header className="sticky top-0 z-50 border-b border-[var(--color-border)] bg-[#fbf8f4]">
-      <div className="mx-auto flex max-w-[var(--container-large)] items-center justify-between px-6 py-5 md:px-8">
-        <Link
-          href="/"
-          className="text-lg font-semibold tracking-tight text-[#333333] md:text-xl"
-        >
-          Green Flag
+    <header className="sticky top-0 z-50 border-none bg-[#1a1a1a]">
+      <div className="mx-auto flex max-w-[var(--container-large)] items-center justify-between gap-8 px-6 py-5 md:px-12 lg:px-16">
+        <Link href="/" className="flex shrink-0 items-center gap-2">
+          <img src="/logo.svg" alt="Green Flag" className="h-8 w-auto md:h-9" />
+          <span className="text-lg font-medium text-white">Green Flag</span>
         </Link>
-        <nav className="hidden gap-8 md:flex">
-          {navLinks.map(({ href, label }) => (
-            <Link
-              key={href}
-              href={href}
-              className="text-[15px] text-[#555555] transition hover:text-[#4caf50]"
-            >
-              {label}
-            </Link>
-          ))}
-        </nav>
         <Link
           href="/contact"
-          className="rounded-lg bg-[#4caf50] px-6 py-3 text-sm font-medium text-white transition hover:bg-[#43a047]"
+          className="flex shrink-0 items-center gap-2 rounded-full bg-[#4caf50] px-5 py-2.5 text-sm font-medium text-white transition hover:bg-[#43a047]"
         >
-          Get in touch
+          Get Started Now
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M5 12h14M12 5l7 7-7 7" />
+          </svg>
         </Link>
       </div>
     </header>
