@@ -9,7 +9,7 @@ export function About() {
           </h2>
           <div className="mx-auto w-full max-w-[42rem] space-y-6 text-center text-[1.0625rem] leading-[1.75] text-[#555555]">
             <p>
-              In the meantime, if you&apos;re hiring for technology or transformation roles, we connect you directly with the person leading the hire.
+              In the meantime, if you&apos;re hiring for technology or transformation roles, we connect you directly with Gerard, who will be leading the hire.
             </p>
             <p className="font-semibold text-[#333333]">
               Just a straightforward conversation.
